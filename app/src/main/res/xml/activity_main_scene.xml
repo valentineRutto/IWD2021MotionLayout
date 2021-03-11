@@ -50,6 +50,8 @@
             motion:layout_constraintRight_toRightOf="parent"
             android:layout_width="wrap_content"
             android:id="@+id/textView2"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent" >
+            <Transform android:rotation="360"/>
+        </Constraint>
     </ConstraintSet>
 </MotionScene>
