@@ -1,3 +1,3 @@
 # IWD2021MotionLayout
 
-Sample code with motion layout
+Sample code for Complex UI/Animations with Motion Layout talk at the IWDEastAfricaSummit2021
