@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+           <KeyCycle
+               android:translationY="50dp"
+               motion:framePosition="100"
+               motion:motionTarget="@id/ic_robot"
+               motion:waveOffset="0"
+               motion:wavePeriod="0"
+               motion:waveShape="sin" />
+           <KeyCycle
+               android:translationY="50dp"
+               motion:framePosition="50"
+               motion:motionTarget="@id/ic_robot"
+               motion:waveOffset="0"
+               motion:wavePeriod="1"
+               motion:waveShape="sin" />
+           <KeyCycle
+               android:translationY="50dp"
+               motion:framePosition="0"
+               motion:motionTarget="@id/ic_robot"
+               motion:waveOffset="0"
+               motion:wavePeriod="0"
+               motion:waveShape="sin" />
+       </KeyFrameSet>
+
+        <OnClick
+
+        motion:targetId="@+id/ic_robot"/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:id="@+id/ic_robot"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.009"
+            android:layout_marginBottom="24dp" />
+        <Constraint
+            android:layout_height="100dp"
+            android:layout_marginTop="4dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.987"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/ic_cookie" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:layout_height="100dp"
+            android:layout_marginTop="636dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.543"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            android:layout_width="100dp"
+            android:id="@+id/ic_cookie" />
+        <Constraint
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:id="@+id/ic_robot"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias="0.974"
+            motion:layout_constraintHorizontal_bias="1.0" />
+    </ConstraintSet>
+</MotionScene>
